@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - LLT Silver Jewelry</title>
+    <link rel="stylesheet" href="css/see-more.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo">
+        </div>
+        <nav class="title">
+            <ul class="title-list">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="Introduction.html">GIỚI THIỆU</a></li>
+                <li>
+                    <a href="product.html">SẢN PHẨM</a>
+                </li>
+                <li>
+                    <a href="Service.html">DỊCH VỤ</a>
+                </li>
+                <li><a href="Contact.html">LIÊN HỆ</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Tìm kiếm nhanh...">
+                <button class="search-icon"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+            <div class="cart-wrapper">
+                <a href="cart.html" class="cart-icon">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <a href="register.html" class="btn-login"><b>ĐĂNG KÝ / ĐĂNG NHẬP</b></a>
+        </div>
+    </header>
+
+    <div class="banner"></div>
+    <div class="breadcrumb">
+        <a class="Come-back" href="product.html">Trở về / <b>Các sản phẩm của chúng tôi</b></a>
+    </div>
+
+    <div class="product-page-container">
+        <div class="product-grid">
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-1.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD01</p>
+                    <p class="p-price">6.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW01', 6029000, 'img/vong-tay-1.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-1.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD02</p>
+                    <p class="p-price">6.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW02', 6029000, 'img/vong-tay-1.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-1.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD03</p>
+                    <p class="p-price">6.009.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW03', 6009000, 'img/vong-tay-kc-1.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-2.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD04</p>
+                    <p class="p-price">4.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW04', 4029000, 'img/vong-tay-kc-2.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-3.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD05</p>
+                    <p class="p-price">3.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW05', 3900000, 'img/vong-tay-kc-3.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-4.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD06</p>
+                    <p class="p-price">3.990.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW06', 3990000, 'img/vong-tay-kc-4.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-5.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD07</p>
+                    <p class="p-price">7.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW06', 9900000, 'img/vong-tay-kc-5.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-6.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD08</p>
+                    <p class="p-price">5.345.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW08', 5345000, 'img/vong-tay-kc-6.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-7.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD09</p>
+                    <p class="p-price">4.870.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW09', 4870000, 'img/vong-tay-kc-7.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-8.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD010</p>
+                    <p class="p-price">3.999.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW05', 3999000, 'img/vong-tay-kc-8.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-9.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD011</p>
+                    <p class="p-price">11.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDDW011', 11900000, 'img/vong-tay-kc-9.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-10.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD012</p>
+                    <p class="p-price">8.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 8900000, 'img/vong-tay-kc-10.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-11.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD013</p>
+                    <p class="p-price">8.990.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 8990000, 'img/vong-tay-kc-11.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-12.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD014</p>
+                    <p class="p-price">9.980.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 9980000, 'img/vong-tay-kc-12.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-13.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD015</p>
+                    <p class="p-price">7.780.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD015', 7780000, 'img/vong-tay-kc-13.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-14.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD016</p>
+                    <p class="p-price">9.090.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 9090000, 'img/vong-tay-kc-16.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-15.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD017</p>
+                    <p class="p-price">8.999.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD017', 8999000, 'img/vong-tay-kc-15.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-16.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD018</p>
+                    <p class="p-price">6.000.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD018', 6000000, 'img/vong-tay-kc-16.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-17.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD019</p>
+                    <p class="p-price">8.700.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD019', 8700000, 'img/vong-tay-kc-17.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-18.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD020</p>
+                    <p class="p-price">6.780.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 6780000, 'img/vong-tay-kc-18.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-19.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD021</p>
+                    <p class="p-price">9.910.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD012', 9910000, 'img/vong-tay-kc-19.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-tay-kc-20.jpg" alt="Vòng tay">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Vòng tay 14K LLT DDDD022</p>
+                    <p class="p-price">6.928.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vòng Tay 14K LLT DDDD022', 6928000, 'img/vong-tay-kc-20.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+             <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-1.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW01</p>
+                    <p class="p-price">36.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim cương 14K LLT DDDDW01', 36029000, 'img/nhan-kc-1.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-2.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW02</p>
+                    <p class="p-price">6.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim cương 14K LLT DDDDW02', 6029000, 'img/nhan-kc-2.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-3.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14k LLT DDDDW03</p>
+                    <p class="p-price">3.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW03', 3029000, 'img/nhan-kc-3.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-4.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW04</p>
+                    <p class="p-price">2.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW04', 2900000, 'img/nhan-kc-4.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-5.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW05</p>
+                    <p class="p-price">4.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW05', 4029000, 'img/nhan-kc-5.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-6.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW06</p>
+                    <p class="p-price">2.629.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW06', 2629000, 'img/nhan-kc-6.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-7.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW07</p>
+                    <p class="p-price">5.670.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW07', 5670000, 'img/nhan-kc-7.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-8.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW08</p>
+                    <p class="p-price">6.890.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW08', 6890000, 'img/nhan-kc-8.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-9.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW09</p>
+                    <p class="p-price">5.680.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW09', 5680000, 'img/nhan-kc-9.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-10.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW010</p>
+                    <p class="p-price">4.760.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW010', 4760000, 'img/nhan-kc-10.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-11.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW011</p>
+                    <p class="p-price">3.908.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW011', 3908000, 'img/nhan-kc-11.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-12.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW012</p>
+                    <p class="p-price">5.790.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW012', 5790000, 'img/nhan-kc-12.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-13.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW013</p>
+                    <p class="p-price">5.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW013', 5900000, 'img/nhan-kc-13.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/nhan-kc-14.jpg" alt="Nhẫn Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Nhẫn Bạc đính Kim cương 14K LLT DDDDW014</p>
+                    <p class="p-price">3.900.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Nhẫn Kim Cương 14k LLT DDDDW014', 5900000, 'img/nhan-kc-14.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-1.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM04</p>
+                    <p class="p-price">10.019.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM04', 10019000, 'img/vong-co-kc-1.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-2.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM05</p>
+                    <p class="p-price">10.909.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM05', 10909000, 'img/vong-co-kc-2.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-3.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM06</p>
+                    <p class="p-price">10.899.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM06', 10899000, 'img/vong-co-kc-3.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-4.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM07</p>
+                    <p class="p-price">17.019.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM07', 17019000, 'img/vong-co-kc-4.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-5.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM08</p>
+                    <p class="p-price">18.908.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM08', 18908000, 'img/vong-co-kc-5.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-6.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM09</p>
+                    <p class="p-price">19.176.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM09', 19176000, 'img/vong-co-kc-6.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-7.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM010</p>
+                    <p class="p-price">18.029.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 18029000, 'img/vong-co-kc-7.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-8.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM011</p>
+                    <p class="p-price">12.789.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 12789000, 'img/vong-co-kc-8.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-9.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM012</p>
+                    <p class="p-price">23.564.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 23564000, 'img/vong-co-kc-9.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-10.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM013</p>
+                    <p class="p-price">15.769.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 15769000, 'img/vong-co-kc-10.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-11.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM014</p>
+                    <p class="p-price">9.789.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 9789000, 'img/vong-co-kc-12.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-12.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM015</p>
+                    <p class="p-price">20.019.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 20019000, 'img/vong-co-kc-12.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card-item">
+                <div class="card-img-box">
+                    <img src="img/vong-co-kc-13.jpg" alt="Dây Chuyền Kim Cương">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Dây Chuyền Bạc đính Kim cương LLT DDDM016</p>
+                    <p class="p-price">10.009.000 đ</p>
+                    <p class="p-promo">Ưu đãi ngay 800k</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dây chuyền đính Kim cương 14K LLT DDDM01', 10009000, 'img/vong-co-kc-13.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+     <div id="productModal" class="product-detail-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn" onclick="closeModal()">
+                    <ion-icon name="chevron-back-outline"></ion-icon> Quay lại
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <img id="modal-img" src="" alt="Sản phẩm chi tiết">
+                </div>
+                <div class="modal-right">
+                    <h2 id="modal-name" class="m-name">Tên sản phẩm</h2>
+                    <p id="modal-code" class="m-code">Mã: LLT-XXXX</p>
+                    <p id="modal-price" class="m-price">0 đ</p>
+                    
+                    <div class="m-size">
+                        <p id="modal-size-title">Chọn kích cỡ:</p>
+                        <div class="size-options" id="modal-size-options">
+                            </div>
+                    </div>
+
+                    <div class="m-promo-box">
+                        <p class="promo-title"><b>Ưu đãi dành cho bạn:</b></p>
+                        <ul class="promo-list">
+                            <li><ion-icon name="checkmark-circle"></ion-icon> Miễn phí giao hàng toàn quốc</li>
+                            <li><ion-icon name="checkmark-circle"></ion-icon> Đổi trả dễ dàng trong 48h</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn-buy-now">MUA NGAY (GIAO TẬN NHÀ)</button>
+                    <div class="btn-action-group">
+                        <button id="modal-add-cart" class="btn-add-cart">Thêm vào giỏ</button>
+                        <button class="btn-consult">Gọi tư vấn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="separator"> 
+    <div class="contact">
+    <img src="img/logo.jpg" alt="logo1">
+    <p><b>CÔNG TY TNHH TRANG SỨC BẠC LLT</b></p>
+    <p>Trụ sở chính: Số 235 Hoàng Quốc Việt, Phường Nghĩa Đô, Thành phố Hà Nội, Việt Nam</p>
+    <p>Điện thoại: 1900 888 290 - Email: cskh@LLT.vn</p>
+    <p>Giấy chứng nhận doanh nghiệp: 0909265898 do Sở Kế Hoạch & Đầu tư TP.Hà Nội cấp lần đầu vào 1/1/2026</p>
+</div>
+    <script>
+    // Thêm vào giỏ hàng & Hiển thị thông báo
+   function addToCart(name, price, img) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price, img });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartIcon();
+        showToast("Thêm sản phẩm thành công");
+    }
+
+    function showToast(message) {
+        const toast = document.createElement("div");
+        toast.className = "toast-success"; 
+        
+        toast.innerHTML = `
+            <div class="toast-content">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span>${message}</span>
+                <a href="cart.html" class="view-cart-link">Vào giỏ hàng</a>
+            </div>
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
+    }
+
+    function updateCartIcon() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const count = document.querySelector('.cart-count');
+        if(count) count.innerText = cart.length;
+    }
+
+    function updateCartCountGlobal() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartBadges = document.querySelectorAll('.cart-count');
+        cartBadges.forEach(badge => {
+            badge.innerText = cart.length;
+        });
+    }
+
+    // ----- CODE MỚI: XỬ LÝ BẬT/TẮT GIAO DIỆN CHI TIẾT SẢN PHẨM -----
+    function closeModal() {
+        document.getElementById('productModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Hiện lại thanh cuộn ngoài
+    }
+
+    function initProductClicks() {
+        const productCards = document.querySelectorAll('.product-card-item');
+        
+        productCards.forEach((card, index) => {
+            const imgBox = card.querySelector('.card-img-box');
+            const nameEl = card.querySelector('.p-name');
+            const priceEl = card.querySelector('.p-price');
+            const imgSrc = card.querySelector('img').src;
+            const btnEl = card.querySelector('.add-to-cart-btn');
+
+            // Thêm con trỏ chuột dạng bàn tay để biết có thể click
+            imgBox.style.cursor = 'pointer';
+            nameEl.style.cursor = 'pointer';
+
+            // Hàm mở Modal
+            const openModal = () => {
+                const name = nameEl.innerText;
+                const priceStr = priceEl.innerText;
+                
+                // Điền thông tin vào Modal
+                document.getElementById('modal-img').src = imgSrc;
+                document.getElementById('modal-name').innerText = name;
+                document.getElementById('modal-price').innerText = priceStr;
+                
+                // Tạo một mã giả lập dựa trên vị trí sản phẩm
+                const fakeCode = "LLT-" + String(index + 1).padStart(4, '0');
+                document.getElementById('modal-code').innerText = "Mã: " + fakeCode;
+
+                // Lấy giá trị tiền (số) từ hàm addToCart của nút cũ
+                let priceNum = 0;
+                const onclickAttr = btnEl.getAttribute('onclick');
+                if(onclickAttr) {
+                    const match = onclickAttr.match(/addToCart\([^,]+,\s*(\d+)\s*,/);
+                    if(match && match[1]) {
+                        priceNum = parseInt(match[1]);
+                    }
+                }
+
+                // Gán chức năng Thêm giỏ hàng cho nút trong Modal
+                const modalAddBtn = document.getElementById('modal-add-cart');
+                modalAddBtn.onclick = function() {
+                    addToCart(name, priceNum, imgSrc);
+                };
+
+                // Hiển thị Modal
+                document.getElementById('productModal').style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Ẩn thanh cuộn ngoài
+            };
+
+            // Gắn sự kiện click
+            imgBox.addEventListener('click', openModal);
+            nameEl.addEventListener('click', openModal);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartCountGlobal();
+        initProductClicks(); // Khởi chạy bắt sự kiện click cho toàn bộ lưới sản phẩm
+    });
+    </script>
+</body>
+</html>

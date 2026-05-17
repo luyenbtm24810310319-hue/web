@@ -1,0 +1,135 @@
+yy<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLT - Success Notification</title>
+    <style>
+        * {
+            font-family: "Times New Roman", Times, serif;
+            font-style: normal !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fbe7ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn-test {
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+            background: white;
+            border: 3px solid #ff4f93;
+            color: #ff4f93;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-test:hover {
+            background: #ff4f93;
+            color: white;
+        }
+
+        /* Lớp nền mờ (Overlay) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none; /* Mặc định ẩn */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .success-modal {
+            background: white;
+            width: 500px;
+            padding: 50px;
+            border-radius: 20px;
+            border: 6px solid #f7a8c7;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: popUp 0.4s ease-out;
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .success-modal h2 {
+            color: #ff4f93;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .success-modal p {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .success-modal button {
+            background: #ff4f93;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .success-modal button:hover {
+            background: #ff2f7d;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button class="btn-test" onclick="showSuccess()">Bấm để Login</button>
+
+    <div class="overlay" id="successOverlay">
+        <div class="success-modal">
+            <h2>THÀNH CÔNG!</h2>
+            <p>Bạn đã đăng nhập hệ thống LLT thành công.</p>
+            <button onclick="hideSuccess()">Đóng</button>
+        </div>
+    </div>
+
+    <script>
+       
+        function showSuccess() {
+            document.getElementById('successOverlay').style.display = 'flex';
+        }
+
+     
+        function hideSuccess() {
+            document.getElementById('successOverlay').style.display = 'none';
+        
+        }
+
+    
+        window.onclick = function(event) {
+            let overlay = document.getElementById('successOverlay');
+            if (event.target == overlay) {
+                hideSuccess();
+            }
+        }
+    </script>
+
+</body>
+</html>

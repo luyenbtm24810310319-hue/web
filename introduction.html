@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Giới thiệu - LLT Jewelry</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Times New Roman", Times, serif;
+}
+
+body{
+    background:#ffecec;
+    padding-top:90px;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    height:90px;
+    background:rgba(78,78,78,0.9);
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.logo img{
+    height:60px;
+}
+
+.title-list{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.title-list li{
+    display:flex;
+    align-items:center;
+}
+
+.title-list li a{
+    text-decoration:none;
+    color:white;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    transition:0.3s;
+}
+
+.title-list li a:hover{
+    color:#edbff7;
+}
+
+/* ACTIONS */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* SEARCH */
+
+.search-container{
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:#f1f1f1;
+    height:35px;
+    width:35px;
+    border-radius:30px;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.search-container:hover{
+    width:250px;
+    padding-left:15px;
+}
+
+.search-input{
+    width:100%;
+    border:none;
+    background:transparent;
+    outline:none;
+    opacity:0;
+    transition:0.3s;
+    font-size:14px;
+}
+
+.search-container:hover .search-input{
+    opacity:1;
+}
+
+.search-icon{
+    border:none;
+    background:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    padding:0 10px;
+}
+
+.search-icon ion-icon{
+    font-size:22px;
+}
+
+/* CART */
+
+.cart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* Định dạng icon túi xách/giỏ hàng */
+.cart-icon {
+    text-decoration: none;  
+    color: #fff;            
+    font-size: 26px;         
+    display: flex;          
+    transition: 0.3s;        
+}
+
+.cart-icon:hover {
+    color: #ff74ac;         
+}
+
+/* Vòng tròn đỏ hiển thị số lượng sản phẩm */
+.cart-count {
+    position: absolute;     
+    top: -5px;               
+    right: -8px;            
+    background-color: #ff74ac; 
+    color: white;            
+    font-size: 10px;        
+    font-weight: bold;      
+    font-family: 'Montserrat', sans-serif; 
+    width: 18px;            
+    height: 18px;            
+    border-radius: 50%;     
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+    border: 2px solid #ffffff;  
+}
+
+/* LOGIN BUTTON */
+
+.btn-login{
+    padding:8px 15px;
+    border:1px solid #edc1e7;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.btn-login:hover{
+    box-shadow:0 0 15px rgb(249,154,212);
+}
+
+/* BANNER */
+
+.banner{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(65%);
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:80%;
+}
+
+.banner-content h1{
+    font-size:75px;
+    letter-spacing:6px;
+    margin-bottom:25px;
+}
+
+.banner-content p{
+    font-size:24px;
+    line-height:1.8;
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    padding:80px 8%;
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+.about-image{
+    width:42%;
+    height:600px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.about-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.about-image img:hover{
+    transform:scale(1.05);
+}
+
+.about-text{
+    width:45%;
+    height:auto;
+}
+
+.about-text h2{
+    font-size:42px;
+    color:#c77b7b;
+    margin-bottom:30px;
+}
+
+.about-text p{
+    font-size:20px;
+    line-height:2;
+    color:#5b3b3b;
+    margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        padding:0 20px;
+    }
+
+    .title{
+        display:none;
+    }
+
+    .banner{
+        height:80vh;
+    }
+
+    .banner-content h1{
+        font-size:40px;
+    }
+
+    .banner-content p{
+        font-size:18px;
+    }
+
+    .about-section,
+    .reverse{
+        flex-direction:column;
+    }
+
+    .about-image,
+    .about-text{
+        width:100%;
+    }
+
+    .about-image{
+        height:400px;
+    }
+
+    .about-text h2{
+        font-size:30px;
+    }
+
+    .about-text p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Logo">
+    </div>
+
+    <nav class="title">
+
+        <ul class="title-list">
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="Introduction.html">GIỚI THIỆU</a></li>
+
+            <li><a href="product.html">SẢN PHẨM</a></li>
+
+            <li><a href="Service.html">DỊCH VỤ</a></li>
+
+            <li><a href="Contact.html">LIÊN HỆ</a></li>
+
+        </ul>
+
+    </nav>
+
+     <div class="header-actions">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Tìm kiếm nhanh...">
+            <button class="search-icon">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="cart-wrapper">
+            <a href="cart.html" class="cart-icon">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <a href="register.html" class="btn-login"><b>ĐĂNG KÝ / ĐĂNG NHẬP</b></a>
+    </div>
+
+</header>
+
+<section class="banner">
+
+    <img src="img/ibner.jpg" alt="Banner LLT Jewelry">
+
+    <div class="banner-content">
+
+        <h1>LLT SILVER JEWELRY</h1>
+
+        <p>
+            Tỏa sáng nét đẹp riêng với những thiết kế bạc tinh tế,
+            thanh lịch và đầy cảm hứng.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="about-section">
+
+    <div class="about-image">
+
+        <img src="img/I4.jpg" alt="Bông tai">
+
+    </div>
+
+    <div class="about-text">
+
+        <h2>TÔN VINH KHOẢNH KHẮC YÊU THƯƠNG</h2>
+
+        <p>
+            Mang trong mình sứ mệnh trở thành bạn đồng hành
+            luôn thấu hiểu và trân trọng từng khoảnh khắc
+            trong cuộc sống, LLT Jewelry mong muốn mang đến
+            cho khách hàng không chỉ những món trang sức tinh tế
+            mà còn là nơi lưu giữ cảm xúc, kỷ niệm và những câu chuyện
+            hạnh phúc đáng nhớ
+        </p>
+
+    </div>
+
+</section>
+
+<section class="about-section reverse">
+
+    <div class="about-image">
+
+        <img src="img/i2.jpg" alt="Thiết kế">
+
+    </div>
+
+    <div class="about-text">
+
+        <h2>VẺ ĐẸP TỪ TRANG SỨC BẠC</h2>
+
+        <p>
+            Mỗi thiết kế đều được chăm chút tỉ mỉ
+            từ chất liệu đến kiểu dáng, thể hiện vẻ đẹp thanh lịch,
+            hiện đại nhưng vẫn giữ được nét sang trọng riêng biệt.
+            LLT Jewelry tin rằng mỗi món trang sức không đơn thuần
+            là phụ kiện làm đẹp mà còn là biểu tượng của tình yêu,
+            sự tự tin và dấu ấn cá nhân của mỗi người phụ nữ.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="about-section">
+
+    <div class="about-image">
+
+        <img src="img/i3.jpg" alt="Vòng cổ">
+
+    </div>
+
+    <div class="about-text">
+
+        <h2>DẤU ẤN THANH LỊCH RIÊNG BIỆT</h2>
+
+        <p>
+           Lấy cảm hứng từ phong cách hiện đại pha nét nhẹ nhàng tinh tế, 
+           LLT Silver Jewelry mong muốn giúp mỗi khách hàng tự tin thể hiện 
+           cá tính và dấu ấn riêng của mình trong mọi khoảnh khắc.
+        </p>
+
+    </div>
+
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartCount();
+    });
+
+    function updateCartCount() {
+        // Lấy dữ liệu giỏ hàng, nếu không có thì là mảng rỗng
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Chỉ lấy đúng số lượng mẫu mã sản phẩm trong giỏ
+        let totalItems = cart.length; 
+
+        // Cập nhật lên giao diện
+        const cartCountElement = document.querySelector('.cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+        }
+    }
+</script>
+
+</body>
+</html>

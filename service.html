@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - LLT Jewelry</title>
+    <link rel="stylesheet" href="css/Service.css">
+</head>
+<body>
+    
+<main class="container">
+     <!-- NÚT QUAY LẠI -->
+    <div class="breadcrumb">
+        <a href="product.html" class="Come-back">
+            <ion-icon name="arrow-back-outline"></ion-icon> Quay lại
+        </a>
+    </div>
+    
+    <div id="main-list">
+        <div class="top-header">
+            <h2>Tổng hợp chính sách LLT Jewelry</h2>
+        </div>
+
+        <div class="policy-grid">
+            
+            <section class="policy-item">
+                <div class="policy-img" onclick="showPolicy('thanh-toan')">
+                    <img src="img/dv1.jpg" alt="Thanh toán">
+                </div>
+                <div class="policy-info">
+                    <h3 onclick="showPolicy('thanh-toan')">Quy định thanh toán</h3>
+                    <p>Hướng dẫn chi tiết về các hình thức giao dịch tài chính an toàn và minh bạch tại hệ thống.</p>
+                </div>
+            </section>
+
+            
+            <section class="policy-item">
+                <div class="policy-img" onclick="showPolicy('thu-doi')">
+                    <img src="img/dv4.jpg" alt="Thu đổi">
+                </div>
+                <div class="policy-info">
+                    <h3 onclick="showPolicy('thu-doi')">Chính sách thu đổi</h3>
+                    <p>Quy trình thu mua và đổi sản phẩm với tỷ lệ giá trị tối ưu cho khách hàng.</p>
+                </div>
+            </section>
+
+            
+            <section class="policy-item">
+                <div class="policy-img" onclick="showPolicy('giao-hang')">
+                    <img src="img/dv2.jpg" alt="Giao hàng">
+                </div>
+                <div class="policy-info">
+                    <h3 onclick="showPolicy('giao-hang')">Chính sách giao hàng</h3>
+                    <p>Thông tin chi tiết về phí vận chuyển, thời gian giao nhận và các cam kết bảo hiểm hàng hóa.</p>
+                </div>
+            </section>
+
+            
+            <section class="policy-item">
+                <div class="policy-img" onclick="showPolicy('bao-hanh')">
+                    <img src="img/dv3.jpg" alt="Bảo hành">
+                </div>
+                <div class="policy-info">
+                    <h3 onclick="showPolicy('bao-hanh')">Chính sách bảo hành</h3>
+                    <p>Cam kết chất lượng trọn đời với các dịch vụ làm mới, đánh bóng và sửa chữa chuyên nghiệp.</p>
+                </div>
+            </section>
+
+            
+            <section class="policy-item">
+                <div class="policy-img" onclick="showPolicy('huong-dan')">
+                    <img src="img/dv3.jpg" alt="Bảo quản">
+                </div>
+                <div class="policy-info">
+                    <h3 onclick="showPolicy('huong-dan')">Hướng dẫn sử dụng và bảo quản</h3>
+                    <p>Bí quyết giữ gìn vẻ đẹp vĩnh cửu và độ sáng bóng cho trang sức của bạn.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+    <div id="detail-view">
+        <span class="back-nav" onclick="hidePolicy()">← Quay lại danh sách</span>
+        <div id="detail-content" class="content-body"></div>
+    </div>
+
+</main>
+
+<script>
+    const policies = {
+        'giao-hang': `
+            <h1>Chính sách giao hàng</h1>
+            <h2>PHÍ VẬN CHUYỂN</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Đơn hàng</th>
+                        <th colspan="2">Nội thành (Áp dụng tại Hà Nội, Hồ Chí Minh)</th>
+                        <th>Ngoại thành + Tỉnh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left"><b>Thời gian</b></td>
+                        <td>Tiêu chuẩn (1 - 3 ngày)</td>
+                        <td>Hoả tốc (*) (Giao hàng 2h - Áp dụng trong giờ hành chính)</td>
+                        <td>Tiêu chuẩn (3 - 5 ngày)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>Chi phí</b></td>
+                        <td>Miễn phí vận chuyển</td>
+                        <td>Miễn phí vận chuyển</td>
+                        <td>Miễn phí vận chuyển</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>COD (Giao hàng thu tiền)</b></td>
+                        <td>Có áp dụng</td>
+                        <td>Có áp dụng</td>
+                        <td>Có áp dụng</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>(*) Đối với ship Hỏa tốc:</p>
+            <ul>
+                <li>Dưới 10km: < 2h</li>
+                <li>Trên 10km - < 25km: 4h</li>
+            </ul>
+
+            <h3 style="text-align: center;">Thời Gian Giao Hàng Hỏa Tốc</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Thời Gian Đặt Hàng</th>
+                        <th>Thời Gian Nhận Hàng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trước 09:00</td>
+                        <td>Trước 11:00 cùng ngày</td>
+                    </tr>
+                    <tr>
+                        <td>Từ 09:00 - 16:00</td>
+                        <td>Nhận hàng trong vòng 2h</td>
+                    </tr>
+                    <tr>
+                        <td>Sau 16:00</td>
+                        <td>Trước 11:00 ngày kế tiếp</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: #f26d63;">Một số trường hợp đặc biệt trong chính sách vận chuyển cụ thể:</h3>
+            <ul>
+                <li>Với sản phẩm được giảm giá, giá trị đơn hàng được tính giá trị sau khi giảm giá.</li>
+                <li>Giá cước vận chuyển phụ thuộc vào khoảng cách địa lý. Nhân viên sẽ thông báo đến khách hàng trước khi vận chuyển trong trường hợp khách là người thanh toán phí vận chuyển.</li>
+                <li>Thời gian không bao gồm đặt mới, chỉnh sửa sản phẩm.</li>
+                <li>Thời gian vận chuyển có thể sớm hoặc muộn hơn một vài ngày tùy thuộc vào điều kiện khách quan.</li>
+            </ul>
+
+            <h2>BẢO HIỂM HÀNG HOÁ</h2>
+            <p>Tất cả các sản phẩm LLT Jewelry gửi đến cho khách hàng thông qua đối tác vận chuyển đều được LLT Jewelry mua bảo hiểm và đảm bảo đền bù 100% giá trị hàng hoá nếu đơn hàng bị thất lạc.</p>
+            <p><b>*** Lưu ý:</b></p>
+            <ul>
+                <li>Khi lên đơn giao hàng đảm bảo, LLT Jewelry có để chế độ đồng kiểm hàng với bên giao hàng. Khách hàng vui lòng quay video trong quá trình nhận và mở hàng kiểm tra, không nhận nếu thấy gói hàng có dấu hiệu bất thường.</li>
+                <li>Các khiếu nại/ thiếu sản phẩm, nếu không có video sẽ không thể xác định nguyên nhân sai/ thiếu hàng do LLT Jewelry hay do đơn vị vận chuyển thì LLT Jewelry sẽ không giải quyết.</li>
+            </ul>
+            <p>Phân định trách nhiệm của thương nhân, tổ chức cung ứng dịch vụ logistics về cung cấp chứng từ hàng hóa trong quá trình giao nhận.</p>
+
+            <h3>Nghĩa vụ của bên vận chuyển</h3>
+            <ul>
+                <li>Bảo đảm vận chuyển tài sản đầy đủ, an toàn đến địa điểm đã định, theo đúng thời hạn.</li>
+                <li>Giao tài sản cho người có quyền nhận.</li>
+                <li>Chịu chi phí liên quan đến việc chuyên chở tài sản, trừ trường hợp có thỏa thuận khác.</li>
+                <li>Mua bảo hiểm trách nhiệm dân sự theo quy định của pháp luật.</li>
+                <li>Bồi thường thiệt hại cho bên thuê vận chuyển trong trường hợp bên vận chuyển để mất, hư hỏng tài sản, trừ trường hợp có thỏa thuận khác hoặc pháp luật có quy định khác.</li>
+            </ul>
+
+            <h3>Quyền của bên vận chuyển</h3>
+            <ul>
+                <li>Kiểm tra sự xác thực của tài sản, của vận đơn hoặc chứng từ vận chuyển tương đương khác.</li>
+                <li>Từ chối vận chuyển tài sản không đúng với loại tài sản đã thỏa thuận trong hợp đồng.</li>
+                <li>Yêu cầu bên thuê vận chuyển thanh toán đủ cước phí vận chuyển đúng thời hạn.</li>
+                <li>Từ chối vận chuyển tài sản cấm giao dịch, tài sản có tính chất nguy hiểm, độc hại, nếu bên vận chuyển.</li>
+            </ul>
+
+            <h3>Nghĩa vụ của bên thuê vận chuyển</h3>
+            <ul>
+                <li>Trả đủ tiền cước phí vận chuyển cho bên vận chuyển theo đúng thời hạn, phương thức đã thỏa thuận.</li>
+                <li>Cung cấp thông tin cần thiết liên quan đến tài sản vận chuyển để bảo đảm an toàn cho tài sản vận chuyển.</li>
+                <li>Trông coi tài sản trên đường vận chuyển, nếu có thỏa thuận. Trường hợp bên thuê vận chuyển trông coi tài sản mà tài sản bị mất, hư hỏng thì không được bồi thường.</li>
+            </ul>
+
+            <h3>Quyền của bên thuê vận chuyển</h3>
+            <ul>
+                <li>Yêu cầu bên vận chuyển chuyên chở tài sản đến đúng địa điểm, thời điểm đã thỏa thuận.</li>
+                <li>Trực tiếp hoặc chỉ định người thứ ba nhận lại tài sản đã thuê vận chuyển.</li>
+            </ul>
+
+            <h3>Trách nhiệm bồi thường thiệt hại</h3>
+            <ul>
+                <li>Bên vận chuyển phải bồi thường thiệt hại cho bên thuê vận chuyển nếu để tài sản bị mất hoặc hư hỏng.</li>
+                <li>Bên thuê vận chuyển phải bồi thường thiệt hại cho bên vận chuyển và người thứ ba về thiệt hại do tài sản vận chuyển có tính chất nguy hiểm, độc hại mà không có biện pháp đóng gói, bảo đảm an toàn trong quá trình vận chuyển.</li>
+                <li>Trường hợp bất khả kháng dẫn đến tài sản vận chuyển bị mất, hư hỏng hoặc bị hủy hoại trong quá trình vận chuyển thì bên vận chuyển không phải chịu trách nhiệm bồi thường thiệt hại, trừ trường hợp có thỏa thuận khác hoặc pháp luật có quy định khác.</li>
+            </ul>
+            
+            <p><b>Mọi thông tin thắc mắc quý khách vui lòng liên hệ hotline 1900 888 290</b></p>
+        `,
+        'thanh-toan': `
+            <h1>Quy định thanh toán</h1>
+            <p>Nhằm đảm bảo các giao dịch mua bán vàng tại LLT Jewelry được <b>an toàn, minh bạch và tuân thủ quy định</b> của Nhà nước theo <b>Nghị định số 232/2025/NĐ-CP</b>, LLT Jewelry trân trọng thông báo đến Quý khách những hướng dẫn sau:</p>
+            
+            <h2>1. Nguyên tắc chung:</h2>
+            <ul>
+                <li>Tổng giá trị giao dịch trong ngày của mỗi khách hàng (<b>bao gồm mua, bán và đặt cọc</b>) được tính gộp trên toàn hệ thống LLT Jewelry.</li>
+                <li>LLT Jewelry sẽ <b>xuất hóa đơn chính thức và đối chiếu thông tin căn cước (CCCD/Passport)</b> theo quy định pháp luật.</li>
+                <li>Nếu <b>tổng giá trị giao dịch trong ngày từ 20 triệu đồng trở lên</b>, Quý khách vui lòng thực hiện thanh toán bằng hình thức chuyển khoản, từ tài khoản ngân hàng chính chủ của mình đến tài khoản của LLT Jewelry.</li>
+            </ul>
+
+            <h2>2. Hình thức thanh toán:</h2>
+            <ul>
+                <li>Đối với giao dịch có tổng giá trị từ <b>20.000.000 đồng trở lên (trong 01 ngày/01 khách hàng)</b>, Quý khách vui lòng thực hiện thanh toán thông qua <b>tài khoản thanh toán của khách hàng và tài khoản thanh toán của Công ty</b>.</li>
+            </ul>
+
+            <table class="styled-table">
+                <tr>
+                    <th>Áp dụng</th>
+                    <th>KHÔNG áp dụng</th>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <ul>
+                            <li>Chuyển khoản trực tiếp từ tài khoản ngân hàng chính chủ qua ứng dụng ngân hàng hoặc ủy nhiệm chi.</li>
+                            <li>Apple Pay / Samsung Pay <b>liên kết với thẻ ghi nợ (Debit)</b> của khách hàng.</li>
+                            <li>Thẻ ghi nợ (<b>Debit Card, ATM</b>).</li>
+                        </ul>
+                    </td>
+                    <td class="text-left">
+                        <ul>
+                            <li>Thẻ tín dụng (Credit Card), thẻ trả trước (Prepaid).</li>
+                            <li>Ví điện tử (MOMO, ZALOPAY, VNPAY, PAYOO,...).</li>
+                            <li>Thanh toán qua ví trung gian (COD, trung tâm thương mại thu hộ,...).</li>
+                            <li>Phiếu quà tặng LLT Jewelry (cash/e-voucher).</li>
+                            <li>Apple Pay / Samsung Pay liên kết <b>với thẻ tín dụng (Credit)</b>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+            <ul>
+                <li>Đối với giao dịch có tổng giá trị <b>dưới 20.000.000 đồng (trong 01 ngày/01 khách hàng)</b>, Quý khách vẫn có thể <b>thanh toán linh hoạt</b> bằng các hình thức thanh toán theo quy định của LLT Jewelry.</li>
+            </ul>
+
+            <h2>3. Quy định thanh toán qua tài khoản ngân hàng</h2>
+            <ul>
+                <li>Khách hàng phải <b>thanh toán bằng tài khoản ngân hàng chính chủ</b>, trùng khớp với <b>thông tin người đặt hàng và thông tin xuất hóa đơn</b>.</li>
+                <li>Trường hợp <b>thanh toán bằng tài khoản không chính chủ</b>, LLT Jewelry sẽ thực hiện <b>hoàn tiền theo quy định</b>, trong thời gian <b>07-15 ngày làm việc</b>.</li>
+            </ul>
+            <p>Nếu Quý khách cần được hướng dẫn thêm, vui lòng liên hệ <span class="highlight-red">Hotline: 1900 888 290 (Phím 1)</span>.</p>
+
+            <h2>4. Quy định thanh toán trước đối với các đơn giao hàng tận nơi</h2>
+            <p>Đối với sản phẩm vàng từ 20 triệu đồng hoặc đơn hàng vàng có tổng giá trị từ 20 triệu đồng trở lên:</p>
+            <p>Theo Nghị định 232/2025/NĐ-CP, <b>khách hàng cần thanh toán 100% giá trị đơn hàng trước khi giao</b>, qua hình thức chuyển khoản từ tài khoản ngân hàng chính chủ (trùng khớp thông tin người đặt hàng và xuất hóa đơn) đến tài khoản của LLT Jewelry. </p>
+        `,
+        'thu-doi': `
+            <h1>Chính sách thu đổi</h1>
+            <p>Sẵn sàng hỗ trợ khách hàng nâng cấp sản phẩm mới với giá trị thu đổi tốt nhất thị trường.</p>
+            
+            <h2>1. Đối với Trang sức Bạc</h2>
+            <ul>
+                <li>Trang sức Bạc, vòng đá tổng hợp, vòng thạch anh tóc, chuỗi ngọc trai, phone sticker: <b>Không đổi hàng, không mua lại</b>.</li>
+            </ul>
+
+            <h2>2. Một số lưu ý quan trọng:</h2>
+            <ul>
+                <li>Thời gian Đổi hàng/ Mua lại được tính theo ngày làm việc của khối bán hàng.</li>
+                <li>Giá Thu đổi được tính sau giá ưu đãi trên giấy đảm bảo vàng.</li>
+                <li>Mọi giao dịch đổi hàng hoặc mua lại, nhân viên thực hiện giao dịch phải in 02 phiếu mua hàng (01 phiếu giao cho khách hàng).</li>
+                <li>Trên phiếu mua hàng yêu cầu có thông tin cơ bản: Tên khách hàng, số điện thoại, số CCCD của khách hàng, chữ ký trên 02 phiếu (ghi rõ họ tên) của khách hàng và nhân viên thực hiện giao dịch.</li>
+                <li>Sản phẩm được phép giao dịch Đổi hàng/ Mua lại khi có dấu, logo của công ty.</li>
+                <li>Trường hợp sản phẩm không có logo công ty nhưng có giấy đảm bảo hoặc trích lục lịch sử mua hàng: Nhân viên gửi sản phẩm đến Trung tâm bảo hành để kiểm tra tuổi vàng và hình ảnh sản phẩm trước khi tiến hành mua lại theo quy chế.</li>
+                <li>Trường hợp khách mang sản phẩm không phải của công ty: Nhân viên tư vấn khách mang sản phẩm qua Trung tâm bảo hành để định giá mua lại.</li>
+            </ul>
+        `,
+        'bao-hanh': `
+            <h1>Chính sách bảo hành</h1>
+            <p>Tận tâm chăm sóc trang sức của bạn bền đẹp theo thời gian.</p>
+            
+            <h2>Bảng phí dịch vụ bảo hành và sửa chữa sản phẩm trang sức bạc</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">STT</th>
+                        <th rowspan="2">Danh mục sửa chữa</th>
+                        <th colspan="2">Biểu phí</th>
+                    </tr>
+                    <tr>
+                        <th>0-12 tháng</th>
+                        <th>Trên 12 tháng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="text-left">Làm sạch tại cửa hàng</td>
+                        <td colspan="2">Miễn phí trọn đời</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="text-left">Đánh bóng và xi mới sản phẩm</td>
+                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                        <td>Phí 50.000 đ</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="text-left">Chỉnh size, nắn nhẫn</td>
+                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                        <td>Phí 50.000 đ</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="text-left">Khắc tên</td>
+                        <td>Miễn phí lần đầu, từ lần 2 tính phí 30.000đ</td>
+                        <td>Phí 30.000 đ</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="text-left">Gắn đá trắng tròn</td>
+                        <td>Miễn phí</td>
+                        <td>Phí 30.000 đ/1 lần gắn<br>(chưa bao gồm phí đánh bóng, xi mới)</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="text-left">Gắn đá baguette, đá hình, ngọc trai, xà cừ...</td>
+                        <td colspan="2">Tính phí theo bảng giá đá</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="text-left">Cắt dây, hàn</td>
+                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                        <td>Phí 50.000 đ</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="text-left">Thêm chi tiết</td>
+                        <td colspan="2">Phí 50.000 đ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>LƯU Ý:</h2>
+            <ul>
+                <li><b>Thời gian sửa chữa:</b> 3 - 5 ngày làm việc.</li>
+                <li>Đối với các hoạt động bảo hành, LLT Jewelry áp dụng <b>bảo hành điện tử</b> bằng việc tra cứu thông tin trên hệ thống phần mềm.</li>
+            </ul>
+
+            <h2>Dịch vụ cho trang sức vàng</h2>
+            <ul>
+                <li>Siêu âm làm sạch bằng máy chuyên dụng miễn phí trọn đời.</li>
+                <li>Làm mới, xi mạ sản phẩm.</li>
+                <li>Hỗ trợ kỹ thuật gắn lại đá tấm nếu bị rớt trong quá trình sử dụng và chỉnh sửa size nhẫn trong phạm vi kỹ thuật.</li>
+            </ul>
+        `,
+        'huong-dan': `
+            <h1>Hướng dẫn sử dụng & Bảo quản</h1>
+            
+            <h2>BÍ QUYẾT BẢO QUẢN TRANG SỨC</h2>
+            <p>Trang sức không chỉ là món phụ kiện tôn lên vẻ đẹp, mà còn lưu giữ giá trị tinh thần của mỗi người. Tuy nhiên, để giữ được độ sáng bóng và hình dáng nguyên vẹn như thuở ban đầu, người sử dụng cần hiểu và áp dụng đúng cách bảo quản. Dưới đây là những hướng dẫn cần thiết giúp bạn giữ gìn trang sức vàng luôn như mới.</p>
+
+            <h2>VỆ SINH ĐỊNH KỲ</h2>
+            <p>Trang sức vàng sau mỗi lần sử dụng nên được lau sạch nhẹ nhàng bằng vải mềm để loại bỏ mồ hôi, dầu và bụi bẩn.</p>
+            <p>Bạn có thể tự làm sạch trang sức tại nhà bằng cách:</p>
+            <ul>
+                <li>Pha nước ấm với một ít nước rửa chén.</li>
+                <li>Ngâm trang sức trong khoảng 10-15 phút.</li>
+                <li>Dùng bàn chải mềm chà nhẹ bề mặt, sau đó lau khô bằng khăn mềm.</li>
+            </ul>
+            <p><i>Lưu ý: Không sử dụng các chất tẩy mạnh như thuốc tẩy, axeton... vì chúng có thể làm mòn bề mặt vàng hoặc gây xỉn màu.</i></p>
+
+            <h2>TRÁNH TIẾP XÚC VỚI HÓA CHẤT</h2>
+            <p>Trang sức vàng rất nhạy cảm với hóa chất, kể cả những sản phẩm tưởng chừng vô hại như nước hoa hay kem dưỡng.</p>
+            <p>Để tránh bị ăn mòn hoặc mất độ bóng, nên tháo trang sức khi: rửa tay, tắm hoặc bơi lội, làm việc nhà, trang điểm hoặc xịt nước hoa.</p>
+
+            <h2>TRÁNH NHIỆT ĐỘ VÀ ÁNH SÁNG CAO</h2>
+            <p>Nhiệt độ cao và ánh nắng trực tiếp có thể làm biến dạng trang sức, đặc biệt là các chi tiết tinh xảo hoặc những viên đá gắn kèm. Vì vậy, không nên để trang sức vàng ở những nơi có nhiệt độ cao như:</p>
+            <ul>
+                <li>Gần bếp hoặc các thiết bị tỏa nhiệt.</li>
+                <li>Dưới ánh nắng mặt trời trong thời gian dài.</li>
+                <li>Trong xe ô tô nóng, đặc biệt vào mùa hè.</li>
+            </ul>
+
+            <h2>BẢO QUẢN RIÊNG BIỆT</h2>
+            <p>Trang sức nên được cất giữ một cách riêng biệt để tránh trầy xước do va chạm với nhau. Lựa chọn tốt nhất là sử dụng các hộp đựng chuyên dụng có lớp lót mềm.</p>
+            <ul>
+                <li>Trong trường hợp không có hộp riêng, có thể thay thế bằng túi zip nhỏ hoặc hộp vải nhung hoặc túi vải mềm.</li>
+                <li>Tuyệt đối không để nhiều món trang sức chồng lên nhau trong cùng một hộp.</li>
+            </ul>
+
+            <h2>MANG SẢN PHẨM ĐẾN CỬA HÀNG ĐỂ LÀM SẠCH ĐỊNH KỲ</h2>
+            <p>Từ 3 đến 6 tháng, bạn nên mang sản phẩm qua LLT Jewelry để làm sạch hoặc làm mới.</p>
+
+            <h2>NHỮNG ĐIỀU CẦN TRÁNH KHI SỬ DỤNG</h2>
+            <p>Có một số hành động tưởng như vô hại nhưng thực chất lại làm tổn hại trang sức vàng như:</p>
+            <ul>
+                <li>Đeo khi làm việc nặng dễ gây móp méo, trầy xước.</li>
+                <li>Đeo khi ngủ có thể làm gãy móc hoặc biến dạng sản phẩm.</li>
+                <li>Dùng nhiều món trang sức cùng lúc làm tăng khả năng cọ xát và hư hỏng.</li>
+            </ul>
+
+            <h3>Một số mẹo nhỏ giúp bạn sử dụng trang sức hiệu quả hơn:</h3>
+            <ul>
+                <li>Nên trang điểm, xịt nước hoa trước và đeo trang sức sau cùng.</li>
+                <li>Nên tháo trang sức trước, sau đó mới tẩy trang hoặc rửa mặt.</li>
+            </ul>
+        `
+    };
+
+    function showPolicy(id) {
+        document.getElementById('main-list').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
+        document.getElementById('detail-content').innerHTML = policies[id];
+        window.scrollTo(0, 0);
+    }
+
+    function hidePolicy() {
+        document.getElementById('main-list').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

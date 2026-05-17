@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffd7e7; 
+            font-family: "Times New Roman", Times, serif; 
+        }
+
+        .reset-container {
+            background-color: white;
+            padding: 30px 50px 50px 50px;
+            border-radius: 25px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 550px;
+            text-align: center;
+            position: relative;
+            border: 6px solid #f7a8c7;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            text-decoration: none;
+            color: #ff4f93; 
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-link:hover {
+            color: #ff2f7d;
+        }
+
+        h2 {
+            color: #ff4f93;
+            margin-bottom: 40px;
+            margin-top: 25px;
+            font-size: 45px; 
+            font-weight: bold;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 18px 25px;
+            margin-bottom: 30px;
+            border: 2px solid #ff9cc4;
+            border-radius: 15px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 22px;
+            color: #a0a0a0;
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+            font-style: normal;
+        }
+
+        .save-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: white;
+            border: 2px solid #ff9cc4;
+            color: #ff4f93;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .save-btn:hover {
+            background-color: #fff0f5;
+            box-shadow: 0 0 10px rgba(255, 156, 196, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reset-container">
+        <a href="login.html" class="back-link">← Quay lại</a>
+
+        <h2>Reset Password</h2>
+
+        <form>
+            <input type="password" placeholder="Enter new password" required>
+            <input type="password" placeholder="Confirm new password" required>
+            
+            <button type="submit" class="save-btn">Save Password</button>
+        </form>
+    </div>
+
+</body>
+</html>
