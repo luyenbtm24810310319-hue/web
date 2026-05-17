@@ -15,69 +15,27 @@
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
 }
-body {
-    font-family: Arial, sans-serif;
-    background: hsl(0, 0%, 100%);
-    color: black;
-    line-height: 1.6;
+
+body{
+    background: #ffd7e7;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-
-header {
+header{
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 0 40px;
     height: 90px;
-    background: rgba(78, 78, 78, 0.9);
+    background: rgba(78,78,78,0.9);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-
-.header-actions {
-    display: flex;          
-    align-items: center;     
-    gap: 20px;               
-    flex-shrink: 0;         
-}
-
-.logo img {
-    height: 60px;
-    display: block;
-}
-
-.title-list {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-}
-
-.title-list > li {
-    position: relative; 
-    display: flex;
-    align-items: center;
-    height: 90px;
-}
-
-.title-list > li > a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    transition: 0.3s;
-}
-
-.title-list > li:hover > a {
-    color: #edbff7;
-}
-
-.title-list > li:hover .mega-menu {
-    display: grid;
-}
-
 .search-container {
     position: relative;
     display: flex;
@@ -109,10 +67,11 @@ header {
     transition: opacity 0.3s ease;
 }
 
+/* Hiện chữ khi hover */
 .search-container:hover .search-input {
     opacity: 1;
 }
-
+/* Icon kính lúp */
 .search-icon ion-icon {
     font-size: 22px; 
     color: #333;      
