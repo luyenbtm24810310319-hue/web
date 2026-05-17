@@ -15,70 +15,107 @@
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
 }
-
-body{
-    background: #ffd7e7;
-    padding-top: 90px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+    font-family: Arial, sans-serif;
+    background: hsl(0, 0%, 100%);
+    color: black;
+    line-height: 1.6;
 }
 
-/* HEADER (Giữ nguyên như trang chủ) */
-header{
+
+header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     padding: 0 40px;
     height: 90px;
-    background: rgba(78,78,78,0.9);
+    background: rgba(78, 78, 78, 0.9);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-/* Container chính cho thanh tìm kiếm */
+
+.header-actions {
+    display: flex;          
+    align-items: center;     
+    gap: 20px;               
+    flex-shrink: 0;         
+}
+
+.logo img {
+    height: 60px;
+    display: block;
+}
+
+.title-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.title-list > li {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.title-list > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.title-list > li:hover > a {
+    color: #edbff7;
+}
+
+.title-list > li:hover .mega-menu {
+    display: grid;
+}
+
 .search-container {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: #f1f1f1; /* Màu nền xám nhạt như ảnh mẫu */
+    background-color: #f1f1f1; 
     height: 30px;
-    width: 30px; /* Ban đầu chỉ là hình tròn chứa kính lúp */
+    width: 30px; 
     border-radius: 20px;
-    transition: width 0.5s ease; /* Hiệu ứng mở rộng mượt mà */
+    transition: width 0.5s ease; 
     overflow: hidden;
     cursor: pointer;
 }
 
-/* Khi rê chuột vào container, nó sẽ dài ra */
 .search-container:hover {
-    width: 250px; /* Độ dài khi hiện ra thanh tìm kiếm */
+    width: 250px;
     padding-left: 15px;
 }
 
-/* Ô nhập liệu văn bản */
 .search-input {
     width: 100%;
     border: none;
     background: transparent;
     outline: none;
     font-size: 14px;
-    font-style: italic; /* Chữ nghiêng sắc sảo như ảnh bạn gửi */
+    font-style: italic; 
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    opacity: 0; /* Ẩn chữ khi chưa hover */
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
-/* Hiện chữ khi hover */
 .search-container:hover .search-input {
     opacity: 1;
 }
-/* Icon kính lúp */
+
 .search-icon ion-icon {
-    font-size: 22px; /* Chỉnh kích thước kính lúp */
-    color: #333;      /* Màu của kính lúp */
+    font-size: 22px; 
+    color: #333;      
     display: block;
 }
 
@@ -91,7 +128,6 @@ header{
     cursor: pointer;
 }
 
-/* Đảm bảo icon giỏ hàng và số lượng nằm đúng vị trí */
 .cart-wrapper {
     position: relative;
     display: flex;
@@ -99,40 +135,37 @@ header{
     height: 40px;
 }
 
-/* Định dạng icon túi xách/giỏ hàng */
 .cart-icon {
-    text-decoration: none;   /* Loại bỏ đường gạch chân mặc định của thẻ liên kết (<a>) */
-    color: #fff;             /* Đặt màu trắng cho icon để đồng bộ với phông nền tối của menu */
-    font-size: 26px;         /* Điều chỉnh kích thước icon to rõ, sắc sảo và dễ nhìn */
-    display: flex;           /* Giúp icon hiển thị chuẩn xác, không bị lệch dòng */
-    transition: 0.3s;        /* Tạo hiệu ứng biến đổi màu sắc mượt mà khi rê chuột vào */
+    text-decoration: none;  
+    color: #fff;            
+    font-size: 26px;         
+    display: flex;          
+    transition: 0.3s;        
 }
 
 .cart-icon:hover {
-    color: #ff74ac;          /* Khi di chuột vào, icon chuyển sang màu xanh Royal đặc trưng */
+    color: #ff74ac;         
 }
 
-/* Vòng tròn đỏ hiển thị số lượng sản phẩm */
 .cart-count {
-    position: absolute;      /* Đặt vị trí tự do để có thể nằm đè lên góc của túi xách */
-    top: -5px;               /* Đẩy vòng tròn lên phía trên icon 5 pixel */
-    right: -8px;             /* Đẩy vòng tròn sang bên phải icon 8 pixel */
-    background-color: #ff74ac; /* Sử dụng màu đỏ tươi để gây sự chú ý với khách hàng */
-    color: white;            /* Chữ số hiển thị bên trong vòng tròn sẽ có màu trắng */
-    font-size: 10px;         /* Kích thước chữ số nhỏ gọn, vừa vặn bên trong vòng tròn */
-    font-weight: bold;       /* Làm đậm chữ số để tăng độ hiển thị rõ nét */
-    font-family: 'Montserrat', sans-serif; /* Sử dụng phông chữ hiện đại, sắc sảo */
-    width: 18px;             /* Chiều rộng của vòng tròn thông báo */
-    height: 18px;            /* Chiều cao của vòng tròn thông báo */
-    border-radius: 50%;      /* Bo tròn tuyệt đối để tạo ra hình tròn hoàn hảo */
-    display: flex;           /* Sử dụng Flexbox để căn chỉnh chữ số vào chính giữa */
-    align-items: center;     /* Căn giữa chữ số theo chiều dọc */
-    justify-content: center; /* Căn giữa chữ số theo chiều ngang */
-    border: 2px solid #ffffff;  /* Tạo viền đen bao quanh để tách biệt số lượng với nền Header */
+    position: absolute;     
+    top: -5px;               
+    right: -8px;            
+    background-color: #ff74ac; 
+    color: white;            
+    font-size: 10px;        
+    font-weight: bold;      
+    font-family: 'Montserrat', sans-serif; 
+    width: 18px;            
+    height: 18px;            
+    border-radius: 50%;     
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+    border: 2px solid #ffffff;  
 }
-/* Nút đăng nhập/đăng ký */
 .btn-login {
-    white-space: nowrap;     /* Ép chữ không được nhảy xuống dòng */
+    white-space: nowrap;     
     padding: 8px 15px;
     border: 1px solid #edc1e7;
     border-radius:10px ;
@@ -143,7 +176,8 @@ header{
 }
 .btn-login:hover {
     
-    box-shadow: 0 0 15px rgb(249, 154, 201);
+    box-shadow: 0 0 15px rgb(249, 154, 212);
+    
 }
 
 .logo img{ 
@@ -151,13 +185,36 @@ header{
 
 .title-list{ 
     display: flex; 
-    list-style: none; gap: 40px; }
-.title-list li a{ text-decoration: none; color: white; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; transition: 0.3s; }
-.title-list li a:hover{ color: #edbff7; }
+    list-style: none; 
+    gap: 40px;
+}
+.title-list li a{ 
+    text-decoration: none; 
+    color: white; 
+    font-size: 13px; 
+    font-weight: 600; 
+    letter-spacing: 1.5px; 
+    transition: 0.3s; 
+}
+.title-list li a:hover{ 
+    color: #edbff7;
+}
 
-.header-actions{ display: flex; align-items: center; gap: 20px; }
-.btn-login{ padding: 8px 15px; border: 1px solid #edc1e7; border-radius: 10px; text-decoration: none; color: white; font-size: 13px; transition: 0.3s; }
-.btn-login:hover{ box-shadow: 0 0 15px rgb(249,154,212); }
+.header-actions{ 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+.btn-login{ 
+    padding: 8px 15px; 
+    border: 1px solid #edc1e7; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    color: white; 
+    font-size: 13px; 
+    transition: 0.3s; }
+.btn-login:hover{ 
+    box-shadow: 0 0 15px rgb(249,154,212); }
 
 /* KHU VỰC FORM ĐĂNG KÝ */
 .auth-wrapper {
@@ -316,14 +373,14 @@ header{
     <nav class="title">
         <ul class="title-list">
             <li><a href="index.html">TRANG CHỦ</a></li>
-            <li><a href="Introduction.html">GIỚI THIỆU</a></li>
+            <li><a href="introduction.html">GIỚI THIỆU</a></li>
             <li>
                 <a href="product.html">SẢN PHẨM</a>
             </li>
             <li>
-                <a href="Service.html">DỊCH VỤ</a>
+                <a href="service.html">DỊCH VỤ</a>
             </li>
-            <li><a href="Contact.html">LIÊN HỆ</a></li>
+            <li><a href="contact.html">LIÊN HỆ</a></li>
         </ul>
     </nav>
     <div class="header-actions">
