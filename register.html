@@ -4,11 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Đăng ký tài khoản - LLT Jewelry</title>
 
 <style>
-
 *{
     margin: 0;
     padding: 0;
@@ -36,6 +34,7 @@ header{
     width: 100%;
     z-index: 1000;
 }
+
 .search-container {
     position: relative;
     display: flex;
@@ -67,11 +66,10 @@ header{
     transition: opacity 0.3s ease;
 }
 
-/* Hiện chữ khi hover */
 .search-container:hover .search-input {
     opacity: 1;
 }
-/* Icon kính lúp */
+
 .search-icon ion-icon {
     font-size: 22px; 
     color: #333;      
@@ -95,34 +93,35 @@ header{
 }
 
 .cart-icon {
-    text-decoration: none;  
-    color: #fff;            
+    text-decoration: none;   
+    color: #fff;             
     font-size: 26px;         
-    display: flex;          
+    display: flex;           
     transition: 0.3s;        
 }
 
 .cart-icon:hover {
-    color: #ff74ac;         
+    color: #ff74ac;          
 }
 
 .cart-count {
-    position: absolute;     
+    position: absolute;      
     top: -5px;               
-    right: -8px;            
+    right: -8px;             
     background-color: #ff74ac; 
     color: white;            
-    font-size: 10px;        
-    font-weight: bold;      
+    font-size: 10px;         
+    font-weight: bold;       
     font-family: 'Montserrat', sans-serif; 
-    width: 18px;            
+    width: 18px;             
     height: 18px;            
-    border-radius: 50%;     
-    display: flex;          
+    border-radius: 50%;      
+    display: flex;           
     align-items: center;     
     justify-content: center; 
     border: 2px solid #ffffff;  
 }
+
 .btn-login {
     white-space: nowrap;     
     padding: 8px 15px;
@@ -133,20 +132,20 @@ header{
     font-size: 13px;
     display: block;
 }
+
 .btn-login:hover {
-    
-    box-shadow: 0 0 15px rgb(249, 154, 212);
-    
+    box-shadow: 0 0 15px rgb(249, 154, 201);
 }
 
 .logo img{ 
-    height: 60px; }
+    height: 60px; 
+}
 
 .title-list{ 
     display: flex; 
-    list-style: none; 
-    gap: 40px;
+    list-style: none; gap: 40px; 
 }
+
 .title-list li a{ 
     text-decoration: none; 
     color: white; 
@@ -155,8 +154,9 @@ header{
     letter-spacing: 1.5px; 
     transition: 0.3s; 
 }
+
 .title-list li a:hover{ 
-    color: #edbff7;
+    color: #edbff7; 
 }
 
 .header-actions{ 
@@ -164,6 +164,7 @@ header{
     align-items: center; 
     gap: 20px; 
 }
+
 .btn-login{ 
     padding: 8px 15px; 
     border: 1px solid #edc1e7; 
@@ -171,11 +172,13 @@ header{
     text-decoration: none; 
     color: white; 
     font-size: 13px; 
-    transition: 0.3s; }
-.btn-login:hover{ 
-    box-shadow: 0 0 15px rgb(249,154,212); }
+    transition: 0.3s; 
+}
 
-/* KHU VỰC FORM ĐĂNG KÝ */
+.btn-login:hover{ 
+    box-shadow: 0 0 15px rgb(249,154,212); 
+}
+
 .auth-wrapper {
     flex: 1;
     display: flex;
@@ -201,7 +204,7 @@ header{
 
 .auth-header h2 {
     font-size: 36px;
-    color: #ff74ac#ff74ac#ff74ac;
+    color: #ff74ac;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -287,13 +290,12 @@ header{
     font-family: Arial, sans-serif;
 }
 
-/* HIỆU ỨNG THÔNG BÁO Ở GIỮA MÀN HÌNH */
 .toast-notification {
     position: fixed;
-    bottom: -100px; /* Ẩn ở dưới màn hình ban đầu */
+    bottom: -100px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50; /* Màu xanh lá cây thành công */
+    background-color: #4CAF50; 
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
@@ -309,18 +311,15 @@ header{
 }
 
 .toast-notification.show {
-    bottom: 40px; /* Hiện lên cách đáy 40px */
+    bottom: 40px; 
 }
 
-/* RESPONSIVE */
 @media(max-width: 768px) {
     .title-list { display: none; }
     .auth-container { padding: 30px 20px; }
     .auth-header h2 { font-size: 28px; }
 }
-
 </style>
-
 </head>
 
 <body>
@@ -333,12 +332,8 @@ header{
         <ul class="title-list">
             <li><a href="index.html">TRANG CHỦ</a></li>
             <li><a href="introduction.html">GIỚI THIỆU</a></li>
-            <li>
-                <a href="product.html">SẢN PHẨM</a>
-            </li>
-            <li>
-                <a href="service.html">DỊCH VỤ</a>
-            </li>
+            <li><a href="product.html">SẢN PHẨM</a></li>
+            <li><a href="service.html">DỊCH VỤ</a></li>
             <li><a href="contact.html">LIÊN HỆ</a></li>
         </ul>
     </nav>
@@ -406,24 +401,20 @@ header{
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script>
-
     document.addEventListener('DOMContentLoaded', () => {
         updateCartCount();
     });
 
     function updateCartCount() {
-        // Lấy dữ liệu giỏ hàng, nếu không có thì là mảng rỗng
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        // Chỉ lấy đúng số lượng mẫu mã sản phẩm trong giỏ
         let totalItems = cart.length; 
 
-        // Cập nhật lên giao diện
         const cartCountElement = document.querySelector('.cart-count');
         if (cartCountElement) {
             cartCountElement.textContent = totalItems;
         }
     }
+
     const registerForm = document.getElementById('registerForm');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirm_password');
@@ -431,37 +422,24 @@ header{
     const toastMsg = document.getElementById('toastMsg');
 
     registerForm.addEventListener('submit', function(event) {
-        // Ngăn chặn trang tự động reload khi bấm submit
         event.preventDefault();
 
-        // Kiểm tra mật khẩu có khớp không
         if (password.value !== confirmPassword.value) {
             passwordError.style.display = 'block';
             confirmPassword.style.borderColor = 'red';
         } else {
-            // Ẩn lỗi nếu có
             passwordError.style.display = 'none';
             confirmPassword.style.borderColor = '#e0e0e0';
 
-            // Xử lý lưu thông tin hoặc gọi API ở đây (nếu có backend)
-            // ...
-
-            // Hiển thị thông báo Toast thành công ở giữa màn hình
             toastMsg.classList.add('show');
-
-            // Xóa form sau khi đăng ký
             registerForm.reset();
 
-            // Tự động ẩn thông báo sau 3 giây và có thể chuyển hướng về trang đăng nhập
             setTimeout(() => {
                 toastMsg.classList.remove('show');
-                // Tùy chọn: Bỏ comment dòng dưới để tự chuyển sang trang đăng nhập
-                // window.location.href = 'login.html'; 
             }, 3000);
         }
     });
 
-    // Ẩn cảnh báo lỗi ngay khi người dùng bắt đầu nhập lại mật khẩu
     confirmPassword.addEventListener('input', function() {
         passwordError.style.display = 'none';
         confirmPassword.style.borderColor = '#e0e0e0';
